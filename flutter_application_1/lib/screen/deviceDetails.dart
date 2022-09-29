@@ -11,26 +11,26 @@ class DeviceDetails extends StatelessWidget {
 
   DeviceDetails({super.key, required this.bulding});
 
-  Building building;
-
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
     var name;
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CircleAvatar(
-            foregroundImage: NetworkImage(DeviceDetails.imgurl),
-            radius: 90,
-          ),
-          Text(
-            DeviceDetails.name,
-            style: TextStyle(fontSize: 28),
-          )
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              foregroundImage: NetworkImage(bulding.imgurl),
+              radius: 90,
+            ),
+            Text(
+              bulding.name,
+              style: TextStyle(fontSize: 28),
+            )
+          ],
+        ),
       ),
     );
   }
